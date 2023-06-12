@@ -1,0 +1,40 @@
+﻿@page
+@model LoginApplication.Pages.UsersModel
+@{
+    var loggedInUser = await Model.GetCurrentUserAsync();
+}
+
+<h1>Users</h1>
+<h4>(CurrentUser: @loggedInUser.Name)</h4>
+@if(loggedInUser.Permits)
+{
+    <div class="container mt-3">
+        <a class="btn btn-primary ms-2" asp-area="" asp-page="/AddUser">Add New User</a>
+    </div>
+}
+
+<table class="table mt-5">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Manager Name</th>
+            <th>Account Creation Date</th>
+            <th>Update Permit</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.Users)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.Email</td>
+                <td>@user.Address</td>
+                <td>@user.ManagerName</td>
+                <td>@user.AccountCreationDate.ToString().Substring(0,10)</td>
+                <td>@user.Permits</td>
+            </tr>
+        }
+    </tbody>
+</table>
