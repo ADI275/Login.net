@@ -1,0 +1,44 @@
+﻿@page
+@model LoginApplication.Pages.AddStockModel
+@{
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3">Add Stock</h1>
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Model.Name">Name</label>
+                    <input type="text" asp-for="Model.Name" class="form-control" />
+                    <span asp-validation-for="Model.Name" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Model.Price">Price</label>
+                    <input type="number" asp-for="Model.Price" class="form-control" />
+                    <span asp-validation-for="Model.Price" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Model.SellingPrice">Selling Price</label>
+                    <input type="number" asp-for="Model.SellingPrice" class="form-control" />
+                    <span asp-validation-for="Model.SellingPrice" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Model.Qty">Quantity</label>
+                    <input type="number" asp-for="Model.Qty" class="form-control" />
+                    <span asp-validation-for="Model.Qty" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <div class="dropdown">
+                        <label asp-for="Model.Branch">Select a branch: </label>
+                        <select id="Model.Branch" name="Model.Branch" asp-items="Model.Options"></select>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

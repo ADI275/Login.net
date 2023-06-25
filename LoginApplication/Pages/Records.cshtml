@@ -1,0 +1,32 @@
+﻿@page
+@model LoginApplication.Pages.RecordsModel
+@{
+}
+
+<table class="table mt-5">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Stock Name</th>
+            <th>Branch Name</th>
+            <th>Qty</th>
+            <th>Bought On</th>
+            <th>Sold On</th>
+            <th>Profit</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var record in Model.Records)
+        {
+            <tr>
+                <td>@record.UserName</td>
+                <td>@record.StockName</td>
+                <td>@record.BranchName</td>
+                <td>@record.Qty</td>
+                <td>@record.BoughtOn</td>
+                <td>@record.SoldOn</td>
+                <td>@record.Profit</td>
+            </tr>
+        }
+    </tbody>
+</table>

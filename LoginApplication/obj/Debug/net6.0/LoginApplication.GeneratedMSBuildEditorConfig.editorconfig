@@ -16,8 +16,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\sharm\source\repos\LoginApplication\LoginApplication
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/sharm/source/repos/LoginApplication/LoginApplication/Pages/AddStock.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkU3RvY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/sharm/source/repos/LoginApplication/LoginApplication/Pages/AddUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sharm/source/repos/LoginApplication/LoginApplication/Pages/Buy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnV5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sharm/source/repos/LoginApplication/LoginApplication/Pages/ChangeBranch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbmdlQnJhbmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sharm/source/repos/LoginApplication/LoginApplication/Pages/EditPrice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFByaWNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/sharm/source/repos/LoginApplication/LoginApplication/Pages/Error.cshtml]
@@ -40,16 +56,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/sharm/source/repos/LoginApplication/LoginApplication/Pages/Records.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjb3Jkcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/sharm/source/repos/LoginApplication/LoginApplication/Pages/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sharm/source/repos/LoginApplication/LoginApplication/Pages/Report.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sharm/source/repos/LoginApplication/LoginApplication/Pages/Sell.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VsbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/sharm/source/repos/LoginApplication/LoginApplication/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/sharm/source/repos/LoginApplication/LoginApplication/Pages/Stocks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RvY2tzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/sharm/source/repos/LoginApplication/LoginApplication/Pages/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sharm/source/repos/LoginApplication/LoginApplication/Pages/UserStocks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclN0b2Nrcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/sharm/source/repos/LoginApplication/LoginApplication/Pages/_ViewImports.cshtml]

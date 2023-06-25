@@ -6,7 +6,7 @@
 
 <h1>Users</h1>
 <h4>(CurrentUser: @loggedInUser.Name)</h4>
-@if(loggedInUser.Permits)
+@if (loggedInUser.IsAdmin)
 {
     <div class="container mt-3">
         <a class="btn btn-primary ms-2" asp-area="" asp-page="/AddUser">Add New User</a>
@@ -21,7 +21,11 @@
             <th>Address</th>
             <th>Manager Name</th>
             <th>Account Creation Date</th>
-            <th>Update Permit</th>
+            <th>IsAdmin</th>
+            <th>IsHR</th>
+            <th>IsPriceManager</th>
+            <th>IsAssetManager</th>
+            <th>Branch</th>
         </tr>
     </thead>
     <tbody>
@@ -33,7 +37,11 @@
                 <td>@user.Address</td>
                 <td>@user.ManagerName</td>
                 <td>@user.AccountCreationDate.ToString().Substring(0,10)</td>
-                <td>@user.Permits</td>
+                <td>@user.IsAdmin</td>
+                <td>@user.HR</td>
+                <td>@user.PriceManager</td>
+                <td>@user.AssetManager</td>
+                <td>@user.Branch</td>
             </tr>
         }
     </tbody>

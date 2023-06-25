@@ -1,0 +1,47 @@
+﻿@page
+@model LoginApplication.Pages.ChangeBranchModel
+@{
+    Model.Branches = Model.branchDbContext.Branches.ToList();
+    Model.BranchOptions = new List<SelectListItem>();
+    foreach (var branch in Model.Branches)
+    {
+        Model.BranchOptions.Add(new SelectListItem { Value = branch.Name, Text = branch.Name });
+    }
+
+    Model.Users = Model.authDbContext.Users.ToList();
+    Model.UserOptions = new List<SelectListItem>();
+    foreach (var user in Model.Users)
+    {
+        Model.UserOptions.Add(new SelectListItem { Value = user.Name, Text = user.Name });
+    }
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3">Change Branch</h1>
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="mb-3">
+                    <div class="dropdown">
+                        <label asp-for="SelectedUserOption">Select a branch: </label>
+                        <select id="SelectedUserOption" name="SelectedUserOption" asp-items="Model.UserOptions"></select>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="dropdown">
+                        <label asp-for="SelectedBranchOption">Select a branch: </label>
+                        <select id="SelectedBranchOption" name="SelectedBranchOption" asp-items="Model.BranchOptions"></select>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="DateInput">Select a Date: </label>
+                    <input type="date" asp-for="DateInput" min="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Change</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -8,7 +8,22 @@
 }
 @if(SignInManager.IsSignedIn(HttpContext.User))
 {
-    Response.Redirect("Users");
+    @if(Model.User.IsAdmin)
+    {
+        Response.Redirect("Users");
+    }
+    else if(Model.User.AssetManager)
+    {
+        Response.Redirect("UserStocks");
+    }
+    else if(Model.User.HR)
+    {
+        Response.Redirect("ChangeBranch");
+    }
+    else
+    {
+        Response.Redirect("Stocks");
+    }
 }
 else
 {

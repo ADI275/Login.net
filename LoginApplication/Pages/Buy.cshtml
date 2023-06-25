@@ -1,0 +1,27 @@
+﻿@page "{id:int}"
+@model LoginApplication.Pages.BuyModel
+@{
+    var currDate = DateTime.Today.ToString().Substring(0, 10);
+}
+
+<h1>@Model.Stock.Name</h1>
+<h5>@currDate</h5>
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3">Buy Stock</h1>
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Qty">Select the quantity of the Stock</label>
+                    <input type="number" asp-for="Qty" max="@Model.Stock.Qty" class="form-control" />
+                    <div style="font-size: 0.75rem; font-weight:lighter">Quantity left: @Model.Stock.Qty</div>
+                    <span asp-validation-for="Qty" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Buy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

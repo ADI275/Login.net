@@ -1,0 +1,53 @@
+﻿@page
+@model LoginApplication.Pages.UserStocksModel
+@{
+    /*var currUser = await Model.GetCurrentUserAsync();*/
+
+}
+
+<h1>User Name: @Model.User.Name</h1>
+<h3>Branch Name: @Model.User.Branch</h3>
+
+<table class="table mt-5">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Branch Name</th>
+            <th>Price</th>
+            <th>Selling Price</th>
+            <th>Qty</th>
+            <th>Buy</th>
+            <th>Sell</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var stock in Model.Stocks)
+        {
+            <tr>
+                <td>@stock.Id</td>
+                <td>@stock.Name</td>
+                <td>@stock.Branch</td>
+                <td>@stock.Price</td>
+                <td>@stock.SellingPrice</td>
+                <td>@stock.Qty</td>
+                @if(Model.Valid(stock.Name))
+                {
+                    <td>Sell stock to buy again</td>
+                    <td>
+                        <a asp-area="" asp-page="/Sell" asp-route-id="@stock.Id">Sell</a>
+                        @*<a asp-page-handler="@(() => Model.HandleSell(stock.Name, stock.Price, stock.SellingPrice))">Sell</a>*@
+                        @*<button class="btn btn-primary" type="button" onclick="@(() => Model.HandleSell(stock.Name, stock.Price, stock.SellingPrice))">Sell</button>*@
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <a asp-area="" asp-page="/Buy" asp-route-id="@stock.Id">Buy</a>
+                    </td>
+                    <td>Buy stock to sell</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

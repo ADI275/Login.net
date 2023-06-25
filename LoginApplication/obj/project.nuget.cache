@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "24mXS0T03hqAvJOz/jlOw7beNLkLvdg6HmDKjs4eDwLYcPXqzpT8zNmpv39EzvEX/tOJPAcWyNRYUlkQpq25ng==",
+  "dgSpecHash": "n8djcUvLbxmslVjBOSZ6sLwMYebASFXIMUCxCDmmNrkPYp6xPlk9U9Knu+IsObXXBq7LV82XzQLmwpXK9xGoWg==",
   "success": true,
   "projectFilePath": "C:\\Users\\sharm\\source\\repos\\LoginApplication\\LoginApplication\\LoginApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sharm\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\sharm\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\sharm\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
     "C:\\Users\\sharm\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\sharm\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",
     "C:\\Users\\sharm\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.0\\microsoft.aspnetcore.cryptography.keyderivation.6.0.0.nupkg.sha512",

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 
 namespace LoginApplication.Pages
 {
@@ -20,9 +21,24 @@ namespace LoginApplication.Pages
             this.userManager = userManager;
         }
         public Task<User> GetCurrentUserAsync() => userManager.GetUserAsync(HttpContext.User);
-        public void OnGet()
+        public async Task OnGet()
         {
-            Users = authDbContext.Users.ToList();
+            List<User> UserList = await authDbContext.Users.ToListAsync();
+            DateTime currentDate = DateTime.Today;
+            foreach (var User in UserList)
+            {
+                if (User.NameChangeDate != null && User.NameChangeDate.HasValue && currentDate.Date >= User.NameChangeDate.Value.Date)
+                {
+                    User.Branch = User.ChangedBranch;
+                    User.NameChangeDate = null;
+                }
+            }
+            if(Users != UserList)
+            {
+                authDbContext.Users.UpdateRange(UserList);
+                await authDbContext.SaveChangesAsync();
+            }
+            Users = await authDbContext.Users.ToListAsync();
         }
     }
 }

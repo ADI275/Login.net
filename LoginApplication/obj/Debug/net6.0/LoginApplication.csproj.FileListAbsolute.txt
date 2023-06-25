@@ -86,3 +86,4 @@ C:\Users\sharm\source\repos\LoginApplication\LoginApplication\obj\Debug\net6.0\r
 C:\Users\sharm\source\repos\LoginApplication\LoginApplication\obj\Debug\net6.0\LoginApplication.pdb
 C:\Users\sharm\source\repos\LoginApplication\LoginApplication\obj\Debug\net6.0\LoginApplication.genruntimeconfig.cache
 C:\Users\sharm\source\repos\LoginApplication\LoginApplication\obj\Debug\net6.0\ref\LoginApplication.dll
+C:\Users\sharm\source\repos\LoginApplication\LoginApplication\bin\Debug\net6.0\FluentValidation.dll
