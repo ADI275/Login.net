@@ -1,0 +1,42 @@
+﻿@using LoginApplication.ViewModels;
+@using Microsoft.AspNetCore.Identity;
+@using Microsoft.AspNetCore.Mvc;
+@*@inject SignInManager<User> signInManager;*@
+@inject NavigationManager Navigation
+
+<button class="@BtnClass" @onclick="HandleOnValue">@Value</button>
+
+@code {
+    [Parameter]
+    public string Value { get; set; }
+    public string BtnClass { get; set; }
+
+    [Inject]
+    public SignInManager<User> signInManager { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        if(Value == "Yes")
+        {
+            BtnClass = "btn btn-primary";
+        }
+        else
+        {
+            BtnClass = "btn btn-light m-lg-5 border-dark";
+        }
+    }
+
+    public async Task HandleOnValue()
+    {
+        if(Value == "Yes")
+        {
+            await signInManager.SignOutAsync();
+            Navigation.NavigateTo("Login", forceLoad: false);
+        }
+        else if(Value == "No")
+        {
+            Navigation.NavigateTo("Index", forceLoad: true);
+        }
+    }
+}

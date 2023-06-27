@@ -16,6 +16,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\sharm\source\repos\LoginApplication\LoginApplication
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/sharm/source/repos/LoginApplication/LoginApplication/MyComponents/CurrentUser.razor]
+build_metadata.AdditionalFiles.TargetPath = TXlDb21wb25lbnRzXEN1cnJlbnRVc2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sharm/source/repos/LoginApplication/LoginApplication/MyComponents/LogoutHandle.razor]
+build_metadata.AdditionalFiles.TargetPath = TXlDb21wb25lbnRzXExvZ291dEhhbmRsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sharm/source/repos/LoginApplication/LoginApplication/MyComponents/Table.razor]
+build_metadata.AdditionalFiles.TargetPath = TXlDb21wb25lbnRzXFRhYmxlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sharm/source/repos/LoginApplication/LoginApplication/MyComponents/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = TXlDb21wb25lbnRzXF9JbXBvcnRzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sharm/source/repos/LoginApplication/LoginApplication/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/sharm/source/repos/LoginApplication/LoginApplication/Pages/AddStock.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkU3RvY2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

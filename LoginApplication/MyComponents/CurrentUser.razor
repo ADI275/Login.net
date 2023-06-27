@@ -1,0 +1,26 @@
+﻿<h3>@Text</h3>
+<button @onclick="Func" class="btn btn-primary">@ButtonText</button>
+
+@code {
+    [Parameter]
+    public string UserName { get; set; }
+
+    public string Text { get; set; }
+    public string ButtonText { get; set; } = "View Logged User";
+    public bool flag { get; set; } = false;
+
+    public void Func()
+    {
+        flag = !flag;
+        if(flag)
+        {
+            Text = "Current User is: " + UserName;
+            ButtonText = "Hide";
+        }
+        else
+        {
+            Text = "";
+            ButtonText = "View Logged User";
+        }
+    }
+}

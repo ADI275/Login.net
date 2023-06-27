@@ -1,22 +1,7 @@
 ﻿@page
+@using LoginApplication.MyComponents;
 @model LoginApplication.Pages.ReportModel
 @{
 }
 
-<table class="table mt-5">
-    <thead>
-        <tr>
-            <th>Branch Name</th>
-            <th>Total Profit of Branch</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var report in Model.Reports)
-        {
-            <tr>
-                <td>@report.BranchName</td>
-                <td>@report.TotalProfit</td>
-            </tr>
-        }
-    </tbody>
-</table>
+<component>@(await Html.RenderComponentAsync<Table<Report>>(RenderMode.ServerPrerendered, new { Items = Model.Reports, ModelType = "Reports" }))</component>

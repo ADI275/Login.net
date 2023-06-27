@@ -1,0 +1,60 @@
+﻿@using LoginApplication.Model;
+@using LoginApplication.Pages;
+@using LoginApplication.ViewModels;
+@inject NavigationManager Navigate;
+@typeparam T
+
+<h1 style="text-align: center">@ModelType</h1>
+
+<table class="table mt-5">
+    <thead>
+        <tr>
+            @foreach (var property in typeof(T).GetProperties())
+            {
+                <th>@property.Name</th>
+            }
+            @if (ModelType == "Stocks")
+            {
+                <th>Edit</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Items)
+        {
+            <tr>
+                @foreach (var property in typeof(T).GetProperties())
+                {
+                    <td>@property.GetValue(item)</td>
+                }
+                @if (ModelType == "Stocks")
+                {
+                    <td>
+                        <button class="btn btn-primary" onclick="@(() => HandleClick(@GetItemId(item)))">Edit</button>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@code {
+    [Parameter]
+    public List<T> Items { get; set; }
+    [Parameter]
+    public string ModelType { get; set; }
+
+    private string GetItemId(T item)
+    {
+        // Assuming the ID property of the item is named "Id"
+        var property = typeof(T).GetProperty("Id");
+        var itemId = property.GetValue(item);
+        return itemId.ToString();
+    }
+    public void HandleClick(string id)
+    {
+        string url = "/EditPrice" + "/" + id;
+        Navigate.NavigateTo(url, forceLoad: true);
+    }
+}
